@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FT-Gated University Access System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="glow">FT-Gated University Access System</h1>
+        </header>
+
+        <!-- Login Section -->
+        <section id="login-section" class="section">
+            <h2 class="glow">Student Login</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="student-id">Student ID:</label>
+                    <input type="text" id="student-id" required placeholder="Enter your student ID">
+                </div>
+                <button type="submit" class="pulse">Login</button>
+            </form>
+        </section>
+
+        <!-- Dashboard Section -->
+        <section id="dashboard-section" class="section hidden">
+            <div id="welcome">
+                <h2>Welcome, <span id="student-name">Student</span>!</h2>
+                <button id="logout-btn">Logout</button>
+            </div>
+
+            <div class="id-cards-container">
+                <h3 class="glow">Your ID Cards</h3>
+                
+                <!-- Grid layout for ID cards -->
+                <div class="id-cards-grid">
+                    <!-- Dorm ID Card -->
+                    <div class="id-card-enhanced">
+                        <h4>Dorm ID</h4>
+                        <div class="upload-area" id="dorm-upload-area">
+                            <img id="dorm-preview" class="id-preview" src="" alt="Dorm ID Preview">
+                            <div class="upload-text">
+                                <p>Click to upload or drag & drop your Dorm ID</p>
+                                <p class="file-info">(JPG, PNG, or GIF)</p>
+                            </div>
+                            <input type="file" id="dorm-file" class="file-input" accept="image/*" multiple>
+                        </div>
+                        <div class="preview-gallery" id="dorm-gallery"></div>
+                        <button class="save-btn" data-type="dorm">Save Dorm ID</button>
+                    </div>
+
+                    <!-- Library ID Card -->
+                    <div class="id-card-enhanced">
+                        <h4>Library ID</h4>
+                        <div class="upload-area" id="library-upload-area">
+                            <img id="library-preview" class="id-preview" src="" alt="Library ID Preview">
+                            <div class="upload-text">
+                                <p>Click to upload or drag & drop your Library ID</p>
+                                <p class="file-info">(JPG, PNG, or GIF)</p>
+                            </div>
+                            <input type="file" id="library-file" class="file-input" accept="image/*" multiple>
+                        </div>
+                        <div class="preview-gallery" id="library-gallery"></div>
+                        <button class="save-btn" data-type="library">Save Library ID</button>
+                    </div>
+
+                    <!-- Gym ID Card -->
+                    <div class="id-card-enhanced">
+                        <h4>Gym ID</h4>
+                        <div class="upload-area" id="gym-upload-area">
+                            <img id="gym-preview" class="id-preview" src="" alt="Gym ID Preview">
+                            <div class="upload-text">
+                                <p>Click to upload or drag & drop your Gym ID</p>
+                                <p class="file-info">(JPG, PNG, or GIF)</p>
+                            </div>
+                            <input type="file" id="gym-file" class="file-input" accept="image/*" multiple>
+                        </div>
+                        <div class="preview-gallery" id="gym-gallery"></div>
+                        <button class="save-btn" data-type="gym">Save Gym ID</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
